@@ -55,7 +55,6 @@ class CheckDebugTask extends Task {
     if ($handle && $pattern) {
       while (($line = fgets($handle)) !== false) {
         // process the line read.
-        $this->log($pattern);
         $line = trim($line);
         if (preg_match("/$pattern/", $line)) {
           // Check if it's commented
